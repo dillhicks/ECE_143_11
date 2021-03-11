@@ -4,11 +4,13 @@
 
 # Modules Used:
 
+All modules below can be installed with conda except for those marked with a *
+
 ### Scraping:
 
 ```python
 pandas
-wikipedia
+wikipedia*
 tqdm
 ```
 
@@ -21,7 +23,7 @@ pandas
 sklearn
 nltk
 matplotlib
-sister
+sister*
 plotly
 tqdm
 ```
