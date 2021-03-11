@@ -5,11 +5,17 @@
 # Modules Used:
 
 ### Scraping:
+
+```python
 pandas
-wikipedia 
+wikipedia
 tqdm
+```
+
 
 ### Vectorizing:
+
+```python
 numpy
 pandas
 sklearn
@@ -18,4 +24,5 @@ matplotlib
 sister
 plotly
 tqdm
+```
 
