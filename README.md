@@ -1,5 +1,8 @@
-# ECE_143_11
+# ECE 143 Team 11
 
+Team Members:
+
+James Long, John Babbitt, Christine Lind, Dillon Hicks, Nilesh Pandey
 
 
 # Modules Used:
