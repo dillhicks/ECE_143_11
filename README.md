@@ -40,7 +40,8 @@ sklearn
 
 ### Dash App:
 
-```dash
+```
+dash
 plotly
 ```
 
