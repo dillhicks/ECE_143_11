@@ -31,3 +31,7 @@ plotly
 tqdm
 ```
 
+For proper formating of the jupyter notebooks, view the nbviewer below:
+https://nbviewer.jupyter.org/github/dillhicks/ECE_143_11/blob/main/Vectorize.ipynb
+https://nbviewer.jupyter.org/github/dillhicks/ECE_143_11/blob/main/examples/example_plot.ipynb
+
