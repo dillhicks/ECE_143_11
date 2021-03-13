@@ -78,6 +78,7 @@ Sample output:
 
 ```
 #Dependencies 
+pandas
 country_converter
 sklearn
 ```
