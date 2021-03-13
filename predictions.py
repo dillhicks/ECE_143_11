@@ -1,4 +1,5 @@
 #Predictions
+import pandas as pd
 import numpy as np
 import itertools
 from sklearn.linear_model import LinearRegression
@@ -7,9 +8,18 @@ from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import RFE
 from sklearn.model_selection import cross_val_score
 
-def perform_predictions(cols,years,df):
-    #columns to use for predictions
-    pred_cols = ['Company']
+def perform_predictions(df):
+    ''' 
+    Perform predictions and append to dataframe
+    :input param: df 
+    :input type: pandas dataframe
+    '''
+    
+    assert isinstance(df,pd.DataFrame)
+    cols = ['Market Value','Sales','Profits','Assets','Rank'] #metrics of interest to predict
+    years = range(2017,2021) #years to base predictions on
+    pred_cols = ['Company']  #columns to use for predictions
+    
     # add column names with format like 'Market value 2017'
     temp = list(itertools.product(cols, years))
     pred_cols.extend([ "%s %s" % x for x in temp])

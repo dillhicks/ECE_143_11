@@ -2,12 +2,18 @@ import pandas as pd
 # package to convert and match country names between different classifications and between different naming versions
 import country_converter as coco
     
-def preprocess_data(folder_path,cols,years):
-    #Read and merge all data files, add ISO codes for world map
-    default_cols = ['Company','Country','Industry','Sector','PCA_1','PCA_2','PCA_3','pca_cluster']
+def preprocess_data(folder_path):
+    ''' 
+    Read and merge all data files, add ISO codes for world map
+    :input param: folder_path 
+    :input type: str
+    '''
+   
+    assert isinstance(folder_path,str)
+    cols = ['Market Value','Sales','Profits','Assets','Rank'] #metrics of interest
+    years = range(2008,2021) #years to include
+    default_cols = ['Company','Country','Industry','Sector','PCA_1','PCA_2','PCA_3','pca_cluster'] #default columns in df
     df = pd.DataFrame(columns=default_cols) 
-    #cols = ['Market Value','Sales','Profits','Assets','Rank']
-    #years = range(2008,2021)
 
     for year in years:
         # raw data for the specific year
