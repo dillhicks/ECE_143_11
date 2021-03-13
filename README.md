@@ -7,6 +7,8 @@ James Long, John Babbitt, Christine Lind, Dillon Hicks, Nilesh Pandey
 
 # Usage and Modules Used:
 
+To just use the dash app, run dash_app.ipynb. It will load preprocessed data from pickle in pickles folder. To redo preprocessing, follow steps below.  
+
 All modules below can be installed with conda except for those marked with a *
 
 ### Scraping:
@@ -47,18 +49,7 @@ plotly
 tqdm
 ```
 
-### Preprocessing and Predictions:
-
-#### Preprocessing: 
-Reads csv data from each year in the dataset folder, reformats the data and adds ISO codes to each country. 
-
-#### Linear Regression Predictions:
-Appends predictions for ‘Market Value’, ’Assets’, ‘Profts’, ‘Sales’ and ‘Rank’ for 2021 to the dataframe. 
-
-#### Helper functions: 
-Appends PCA and closest company information as well as ratios of above metrics to the dataframe used in dash visualization. 
-
-Predictions:
+### Closest Company Predictions:
 Import the closest_company.py python script. The python function “k_closest(company,k)” takes two input parameters, query company (string format) and k, the number of closest companies (int format) and returns the k closest companies, their sector and their revenue.
 
 Eg. 
@@ -75,6 +66,27 @@ Sample output:
  ('Microsoft', 'Information Technology', 118.224),
  ('Dell Technologies', 'Information Technology', 90.396)]
 ```
+
+```
+#Dependencies 
+json
+numpy
+pandas
+pickle5
+```
+
+### Preprocessing and Future Predictions:
+
+This is done in the final_dataframe_for_dash notebook, by calling functions in the following files: 
+
+#### Preprocessing: 
+Reads csv data from each year in the dataset folder, reformats the data and adds ISO codes to each country. 
+
+#### Predictions:
+Performs predictions for ‘Market Value’, ’Assets’, ‘Profts’, ‘Sales’ and ‘Rank’ for 2021 using a linear regression model and appends predictions to the dataframe. 
+
+#### Helper functions: 
+Appends PCA and closest company information as well as ratios of above metrics to the dataframe used in dash visualization. 
 
 ```
 #Dependencies 
